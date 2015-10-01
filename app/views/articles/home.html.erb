@@ -1,15 +1,14 @@
-<!-- Displayed load page for a split second -->
-<div  id="loader">
-	<div class="container">
-		<div class="clearfix">
-			<img src="https://logo.clearbit.com/newscred.com?size=200">
-			<img src="<%= asset_path('logo-ibm.jpg') %>" alt="ibm logo" />
-			<h1>NewsCred Reader</h1>
+<!-- LoadView -->
+<div class="loadview flex flex-center p2">
+	<div class="mx-auto">
+		<h1>NewsCred Reader</h1>
+		<div class="logo__ibm mx-auto">
+			<img src="<%= asset_path('logo-ibm.png') %>" alt="ibm logo" />
 		</div>
 	</div>
 </div>
 
-<!-- Loads articles once they are loaded -->
+<!-- FeedView -->
 <!-- <div  id="lists">
 	<div class="container">
 		<div class="clearfix">
