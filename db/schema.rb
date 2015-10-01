@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001190549) do
+ActiveRecord::Schema.define(version: 20151001211340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20151001190549) do
     t.text     "source"
     t.text     "featured_image"
     t.text     "canonical_link"
-    t.integer  "search_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "search_name"
   end
 
   create_table "searches", force: true do |t|

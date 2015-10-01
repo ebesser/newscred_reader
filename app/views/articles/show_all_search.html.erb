@@ -1,0 +1,5 @@
+<% @articles.each do |article| %>
+<h1><%= article.title %></h1>
+<%= article.description.html_safe %>
+
+<% end %>
