@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+
+.loadview {
+     height: 100vh;
+     background: white;
+ }
+
+ .logo__ibm {
+     width: 200px;
+     height: auto;
+ }
