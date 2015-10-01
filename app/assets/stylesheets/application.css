@@ -21,3 +21,15 @@
      width: 200px;
      height: auto;
  }
+
+ button.tags {
+     min-width: 200px;
+ }
+
+ .list__reader a:hover {
+     text-decoration: none; //Reset underline
+ }
+
+ .list__topics button {
+     
+ }
