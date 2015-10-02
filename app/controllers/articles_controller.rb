@@ -21,10 +21,15 @@ class ArticlesController < ApplicationController
 
 	def favorite_article
 		guid = params[:guid]
+		article = Article.where(guid: guid).first
+		article.favorited = true
+		article.save
+		puts article.favorited
 
 		headers = {
-					"X-CSRF-TOKEN" => 'wVZJRKYRZFHTG4_cv6pjfk_S',
-					"Cookie" => 'optimizelyEndUserId=oeu1440515114596r0.6941659844014794; ajs_anonymous_id=%229cea984d-0517-46a4-b00d-609d2b7e22a1%22; _hp2_id.2757902115=2596831747473042.0487519512.1268894314; _uc_referrer=direct; _uc_last_referrer=direct; _uc_initial_landing_page=http%3A//newscred.com/theacademy/learn/calculate-content-marketing-roi; _uc_visits=1; optimizelySegments=%7B%22975020958%22%3A%22search%22%2C%22978391086%22%3A%22false%22%2C%22982220953%22%3A%22gc%22%2C%221800850243%22%3A%22gc%22%2C%221805040336%22%3A%22campaign%22%2C%221824020197%22%3A%22false%22%7D; optimizelyBuckets=%7B%7D; _mkto_trk=id:585-FDY-438&token:_mch-newscred.com-1440515114671-80027; logglytrackingsession=817e2346-1f40-4331-817a-d11260d6c8bf; connect.sid=s%3Azv0mfgnyPZ-dxBNK5YdS2Xzm.5pKbUMmnC8ubFTtX758Oh6BeDMUQyYHoheyVICtBDJY; fs_uid=www.fullstory.com`LjU`5652298076258304; _ga=GA1.2.1643726623.1440515115; ki_t=1434905320455%3B1443746688287%3B1443756020034%3B88%3B2956; ki_r=; _hp2_id.3243919410=5448469651379220.3293417548.2495790455; ajs_user_id=%22533c4bcfd237ee9d351c98e3%22; ajs_group_id=%2200bc8851ea0d2a872fc83d5cab9ad972%22'
+					"X-CSRF-TOKEN" => 'Ky111O_EJMKt7bwl-AwLATGU',
+					"Cookie" => 'optimizelyEndUserId=oeu1440515114596r0.6941659844014794; ajs_anonymous_id=%229cea984d-0517-46a4-b00d-609d2b7e22a1%22; _hp2_id.2757902115=2596831747473042.0487519512.1268894314; _uc_referrer=direct; _uc_last_referrer=direct; _uc_initial_landing_page=http%3A//newscred.com/theacademy/learn/calculate-content-marketing-roi; _uc_visits=1; optimizelySegments=%7B%22975020958%22%3A%22search%22%2C%22978391086%22%3A%22false%22%2C%22982220953%22%3A%22gc%22%2C%221800850243%22%3A%22gc%22%2C%221805040336%22%3A%22campaign%22%2C%221824020197%22%3A%22false%22%7D; optimizelyBuckets=%7B%7D; _mkto_trk=id:585-FDY-438&token:_mch-newscred.com-1440515114671-80027; fs_uid=www.fullstory.com`LjU`5652298076258304; connect.sid=s%3AOBw7g1RTX-hhiYgyji-Y-SFE.ysrXfnp8rR1Kx6c3esWZmQnVbqNrflSA0jGLfpLCBMg; logglytrackingsession=ea7eb484-02a3-4acf-bf37-420e4d545fe1; _hp2_id.3243919410=5448469651379220.0371851598.1968712269; ajs_group_id=%22740c832fcaf57fdd10dec387ef84df0c%22; _ga=GA1.2.1643726623.1440515115; _gat=1; ki_t=1434905320455%3B1443796893294%3B1443796893294%3B89%3B2964; ki_r=; ajs_user_id=%22533c4bcfd237ee9d351c98e3%22
+Host:cmc.newscred.com'
 				}
 
 		payload = {
@@ -32,9 +37,9 @@ class ArticlesController < ApplicationController
 			:format => "json"
 		}
 
-		url = 'https://cmc.newscred.com/api/collection/69c9326f03b105b147a2394c1e801d33/items?access_key=740c832fcaf57fdd10dec387ef84df0c'
+		url = 'https://cmc.newscred.com/api/collection/efe6bdd8c4078164e1ec55216cff71f1/items?access_key=740c832fcaf57fdd10dec387ef84df0c'
 
-		RestClient.post url, payload, headers
+		res = RestClient.post url, payload, headers
 
 		redirect_to '/articles/' + params[:id] + ""
 	end
