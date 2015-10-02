@@ -15,7 +15,9 @@
 			<hr>
 			<p><%= @article.description.html_safe %></p>
 			<p><%= @article.search_name %></p>
-			<%= button_to "Favorite", controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true %>
+			<!-- <p><button class = "fixed top-0 btn btn-primary"> -->
+			<%= button_to "Favorite", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"fixed top-0 btn btn-primary"} %>
+			<!-- </button></p> -->
 		</div>
 	</div>
 </div>
