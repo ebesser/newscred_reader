@@ -5,13 +5,22 @@
 
 <div class="topics flex flex-center p2">
 	<div class="container mx-auto">
-		<div class="clearfix">
-			<ul class="list-reset list__topics">
-				<% @articles.each do |article| %>
-				<!-- <h1><%= article.title %></h1> -->
-				<a href="/all/technology"><li class="inline-block mr1"><h1><%= article.title %></h1></li></a>
-				<% end %>
-			</ul>
-		</div>
+		<ul class="list-reset list__topics">
+			<% @articles.each do |article| %>
+
+			<a href="/all/technology">
+				<li class="px2 story__list">
+
+					<h1 class="col col-10"><%= article.title %></h1>
+
+					<div class="col col-2 img__thumb mx-auto">
+						<img class="rounded" src="http://lorempixel.com/g/100/100/" alt="article img" />
+					</div>
+
+				</li>
+			</a>
+
+			<% end %>
+		</ul>
 	</div>
 </div>

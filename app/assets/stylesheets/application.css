@@ -22,10 +22,17 @@
      height: auto;
  }
 
+ .img__thumb {
+     width: auto;
+     height: auto;
+ }
+
  .list__reader a:hover {
      text-decoration: none; //Reset underline
  }
 
- .list__topics button {
 
- }
+.story__list {
+    min-height: 112px;
+    width: 100%;
+}
