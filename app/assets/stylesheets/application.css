@@ -37,6 +37,14 @@
      text-decoration: none; //Reset underline
  }
 
+ .list__title {
+     text-transform: uppercase;
+ }
+
+ .line__containers p {
+     margin: 0;     //Undo default margins inside line containers
+ }
+
 .story__list {
     min-height: 112px;
     width: 100%;
@@ -54,4 +62,8 @@
 
 .story__headline {
     font-size: 1rem;
+}
+
+button {
+    color: blue;
 }

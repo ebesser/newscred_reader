@@ -1,10 +1,13 @@
 <!-- Feed View -->
-<div class="list__title">
-	<h3 class="italic">Technology</h3>
-</div>
 
 <div class="topics flex flex-center p2">
 	<div class="container mx-auto">
+
+		<div class="list__title clearfix">
+			<h3 class="right tag">In Technology</h3>
+		</div>
+
+		<!-- Generate list of articles -->
 		<ul class="list-reset list__topics">
 			<% @articles.each do |article| %>
 
@@ -16,16 +19,11 @@
 					<div class="col col-4 sm-col-2 py1 img__thumb">
 						<img class="rounded" src="<%= article.featured_image %>" alt="article img" />
 					</div>
-
 				</li>
-
-				<!-- <div class="clearfix border">
-					  <div class="sm-col sm-col-6 md-col-4 border">.sm-col.sm-col-6</div>
-					  <div class="sm-col sm-col-6 md-col-8 border">.sm-col.sm-col-6</div>
-				</div> -->
 			</a>
 			<hr class="mt1">
 			<% end %>
 		</ul>
+		
 	</div>
 </div>
