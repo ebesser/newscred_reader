@@ -10,17 +10,21 @@
 				<h1 class="article__title"><%= @article.title %></h1>
 				<hr>
 			</div>
-			<div class="meta clearfix">
-				<div class="left">
-					<span><%= @article.publish_date %></span>
-					<span><%= @article.author %></span>
-					<span><%= @article.source %></span>
+			<div class="meta">
+				<div class="clearfix">
+					<div class="left">
+						<span><%= @article.source %></span>
+						<span><%= @article.author %></span>
+					</div>
+					<div class="right">
+						<span><%= @article.publish_date %></span>
+					</div>
 				</div>
 				<div class="fav mx-auto center">
 					<% if @article.favorited == false%>
-						<%= button_to "Favorite", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav btn btn-outline mb1 bg-red"} %>
+						<%= button_to "Favorite", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav mt2 mb2 btn btn-outline bg-red"} %>
 					<% else %>
-						<%= button_to "Favorited", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav btn btn-outline mb1 bg-green"} %>
+						<%= button_to "Favorited", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav mt2 mb2 btn btn-primary bg-red"} %>
 					<% end %>
 				</div>
 			</div>

@@ -122,6 +122,10 @@ h1.article__title {
     margin-top: 0;
 }
 
+.btn.btn-fav {
+    font-size: 21px;
+}
+
 //Desktop View and Up
 @media (min-width: 500px) {
     .container {
