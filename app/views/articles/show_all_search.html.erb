@@ -1,6 +1,6 @@
 <!-- Feed View -->
 
-<div class="topics flex flex-center p2">
+<div class="feed flex flex-center p2">
 	<div class="container mx-auto">
 
 		<div class="list__title clearfix">
@@ -8,11 +8,11 @@
 		</div>
 
 		<!-- Generate list of articles -->
-		<ul class="list-reset list__topics">
+		<ul class="list-reset list">
 			<% @articles.each do |article| %>
 
 			<a href="/all/technology">
-				<li class="clearfix border px1 story__list flex flex-center">
+				<li class="clearfix px1 story__list flex flex-center">
 
 					<h1 class="col col-8 sm-col-10 story__headline"><%= article.title %></h1>
 
@@ -24,6 +24,6 @@
 			<hr class="mt1">
 			<% end %>
 		</ul>
-		
+
 	</div>
 </div>
