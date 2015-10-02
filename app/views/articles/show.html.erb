@@ -24,11 +24,8 @@
 					<% if @article.favorited == false%>
 						<%= button_to "Favorite", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav mt2 mb2 btn btn-outline bg-red"} %>
 					<% else %>
-<<<<<<< HEAD
 						<%= button_to "Favorited", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav btn btn-outline mb1 bg-green", :disabled => true} %>
-=======
-						<%= button_to "Favorited", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav mt2 mb2 btn btn-primary bg-red"} %>
->>>>>>> 43d7759e34029a9351fd6b7e59ba02116d1b21eb
+
 					<% end %>
 				</div>
 			</div>
