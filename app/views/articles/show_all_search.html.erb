@@ -1,3 +1,17 @@
-<% @articles.each do |article| %>
-<h1><%= article.title %></h1>
-<% end %>
+<!-- Feed View -->
+<div class="list__title">
+	<h3>In Technology</h3>
+</div>
+
+<div class="topics flex flex-center p2">
+	<div class="container mx-auto">
+		<div class="clearfix">
+			<ul class="list-reset list__topics">
+				<% @articles.each do |article| %>
+				<!-- <h1><%= article.title %></h1> -->
+				<a href="/all/technology"><li class="inline-block mr1"><h1><%= article.title %></h1></li></a>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>
