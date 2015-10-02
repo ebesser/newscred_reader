@@ -20,7 +20,7 @@
 			</div>
 			<ul class="list-reset list__topics">
 				<% @topics.each do |topic| %>
-				<a href="/all/<%= topic %>"><li class="inline-block mr1"><button class="btn btn-outline mb1 blue" type="button" name="button"><%= topic.capitalize! %></button></li></a>
+				<a href="/all/<%= topic %>"><li class="mr4"><button class="btn btn-outline mb1 blue" type="button" name="button"><%= topic.capitalize! %></button></li></a>
 				<% end %>
 			</ul>
 		</div>
