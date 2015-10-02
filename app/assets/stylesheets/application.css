@@ -23,7 +23,7 @@
  }
 
  .img__thumb {
-     width: auto;
+     max-width: 150px;  //Constrained to remain inline for mobile view
      height: auto;
  }
 
@@ -31,8 +31,21 @@
      text-decoration: none; //Reset underline
  }
 
-
 .story__list {
     min-height: 112px;
     width: 100%;
+}
+
+.story__list {
+    min-height: 91px;
+    width: 100%;
+}
+
+.story__thumb {
+    width: 70px;
+    height: auto;
+}
+
+.story__headline {
+    font-size: 1rem;
 }

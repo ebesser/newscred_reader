@@ -1,6 +1,6 @@
 <!-- Feed View -->
 <div class="list__title">
-	<h3>In Technology</h3>
+	<h3 class="italic">Technology</h3>
 </div>
 
 <div class="topics flex flex-center p2">
@@ -9,17 +9,22 @@
 			<% @articles.each do |article| %>
 
 			<a href="/all/technology">
-				<li class="px2 story__list">
+				<li class="clearfix border px1 story__list flex flex-center">
 
-					<h1 class="col col-10"><%= article.title %></h1>
+					<h1 class="col col-8 sm-col-10 story__headline"><%= article.title %></h1>
 
-					<div class="col col-2 img__thumb mx-auto">
-						<img class="rounded" src="http://lorempixel.com/g/100/100/" alt="article img" />
+					<div class="col col-4 sm-col-2 py1 img__thumb">
+						<img class="rounded" src="<%= article.featured_image %>" alt="article img" />
 					</div>
 
 				</li>
-			</a>
 
+				<!-- <div class="clearfix border">
+					  <div class="sm-col sm-col-6 md-col-4 border">.sm-col.sm-col-6</div>
+					  <div class="sm-col sm-col-6 md-col-8 border">.sm-col.sm-col-6</div>
+				</div> -->
+			</a>
+			<hr class="mt1">
 			<% end %>
 		</ul>
 	</div>
