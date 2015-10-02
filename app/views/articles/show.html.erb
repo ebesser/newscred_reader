@@ -1,15 +1,21 @@
-
-<!-- Single Article -->
-<div class="article flex flex-center p2">
+<!-- Single Article View -->
+<div class="article">
+	<div class="img__article">
+		<img class="fit" src="<%= @article.featured_image %>">
+	</div>
 	<div class="container mx-auto">
 		<div class="clearfix">
-			<img src="<%= @article.featured_image %>">
-			<h1><%= @article.title %></h1>
-			<p><%= @article.publish_date %></p>
-			<p><%= @article.author %></p>
-			<p><%= @article.source %></p>
+			<h1 class="article__title"><%= @article.title %></h1>
+			<hr>
+			<div class="meta">
+				<span><%= @article.publish_date %></span>
+				<span><%= @article.author %></span>
+				<span><%= @article.source %></span>
+			</div>
+			<hr>
 			<p><%= @article.description.html_safe %></p>
 			<p><%= @article.search_name %></p>
+			<%= button_to "Favorite", controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true %>
 		</div>
 	</div>
 </div>

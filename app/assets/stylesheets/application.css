@@ -18,6 +18,10 @@
     font-weight: 400;
  }
 
+ .container {
+     max-width: 500px;  //Override default basscss em size
+ }
+
 .loadview {
      height: 100vh;
      background: white;
@@ -66,6 +70,7 @@
 
 .story__headline {
     font-size: 1rem;
+    color: black;
 }
 
 button {
@@ -78,4 +83,32 @@ button {
 
 .tag {
     color: #bbbbbb;
+}
+
+.img__article {
+    width: 100%;
+    background-size: cover;
+    /*Todo: The image needs to be shifted and fixed accordingly*/
+    /*Change this to auto on mobile*/
+    height: 300px;
+    overflow: hidden;
+}
+
+img {
+    width: inherit;
+}
+
+.article .meta {
+    color: #bbbbbb;
+}
+.article {
+    color: gray;
+}
+.article__title {
+    color: black;
+}
+
+.article .meta span {
+    content: "|";
+    padding: 5px 0;
 }

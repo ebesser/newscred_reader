@@ -44,8 +44,9 @@ for article in technology_articles
 		canonical_link = ""
 	end
 	search_name = "technology"
+	guid = article['guid']
 
-	Article.create(description: description, title: title, author: author, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name)
+	Article.create(description: description, title: title, author: author, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name, guid: guid)
 end
 
 for article in leadership_articles
@@ -67,8 +68,9 @@ for article in leadership_articles
 		canonical_link = ""
 	end
 	search_name = "leadership"
+	guid = article['guid']
 
-	Article.create(description: description, title: title, author: author, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name)
+	Article.create(description: description, title: title, author: author, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name, guid: guid)
 end
 
 for article in innovation_articles
@@ -90,8 +92,9 @@ for article in innovation_articles
 		canonical_link = ""
 	end
 	search_name = "innovation"
+	guid = article['guid']
 
-	Article.create(description: description, title: title, author: author, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name)
+	Article.create(description: description, title: title, author: author, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name, guid: guid)
 end
 
 for article in lifestyle_articles
@@ -113,8 +116,9 @@ for article in lifestyle_articles
 		canonical_link = ""
 	end
 	search_name = "lifestyle"
+	guid = article['guid']
 
-	Article.create(description: description, title: title, author: author, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name)
+	Article.create(description: description, title: title, author: author, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name, guid: guid)
 end
 
 for article in small_business_articles
@@ -136,8 +140,9 @@ for article in small_business_articles
 		canonical_link = ""
 	end
 	search_name = "smallbiz"
+	guid = article['guid']
 
-	Article.create(description: description, title: title, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name)
+	Article.create(description: description, title: title, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name, guid: guid)
 end
 
 for article in family_articles
@@ -159,8 +164,9 @@ for article in family_articles
 		canonical_link = ""
 	end
 	search_name = "family"
+	guid = article['guid']
 
-	Article.create(description: description, title: title, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name)
+	Article.create(description: description, title: title, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name, guid: guid)
 end
 
 for article in health_articles
@@ -182,8 +188,9 @@ for article in health_articles
 		canonical_link = ""
 	end
 	search_name = "health"
+	guid = article['guid']
 
-	Article.create(description: description, title: title, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name)
+	Article.create(description: description, title: title, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name, guid: guid)
 end
 
 
@@ -206,6 +213,7 @@ for article in nutrition_articles
 		canonical_link = ""
 	end
 	search_name = "nutrition"
+	guid = article['guid']
 
-	Article.create(description: description, title: title, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name)
+	Article.create(description: description, title: title, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name, guid: guid)
 end
