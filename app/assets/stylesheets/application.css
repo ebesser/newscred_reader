@@ -103,6 +103,10 @@ img {
     color: black;
 }
 
+.clearfix a {
+    color:white;
+}
+
 .article .meta span {
     content: "|";
     padding: 5px 0;
