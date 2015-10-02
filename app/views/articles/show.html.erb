@@ -20,7 +20,7 @@
 					<% if @article.favorited == false%>
 						<%= button_to "Favorite", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav btn btn-outline mb1 bg-red"} %>
 					<% else %>
-						<%= button_to "Favorited", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav btn btn-outline mb1 bg-green"} %>
+						<%= button_to "Favorited", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav btn btn-outline mb1 bg-green", :disabled => true} %>
 					<% end %>
 				</div>
 			</div>
