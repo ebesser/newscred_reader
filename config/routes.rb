@@ -1,8 +1,8 @@
 Reader::Application.routes.draw do
 
-  root to:"articles#home2"
+  get '/home/' => "articles#home"
 
-  get '/' => "articles#home"
+  get '/' => "articles#home2"
   get '/search' => "articles#search"
 
   resources :articles
