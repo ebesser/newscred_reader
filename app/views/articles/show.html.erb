@@ -16,7 +16,11 @@
 			<p><%= @article.description.html_safe %></p>
 			<p><%= @article.search_name %></p>
 			<!-- <p><button class = "fixed top-0 btn btn-primary"> -->
-			<%= button_to "Favorite", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"fixed top-0 btn btn-primary"} %>
+			<% if @article.favorited == false%>
+				<%= button_to "Favorite", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"fixed top-0 btn btn-primary mb1 bg-red"} %>
+			<% else %>
+				<%= button_to "Favorited", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"fixed top-0 btn btn-primary mb1 bg-green"} %>
+				<% end %>
 			<!-- </button></p> -->
 		</div>
 	</div>
