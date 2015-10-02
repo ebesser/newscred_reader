@@ -55,6 +55,10 @@
     width: 100%;
 }
 
+.story__list:hover {
+    background-color: lightgray;
+}
+
 .story__thumb {
     width: 70px;
     height: auto;
@@ -66,4 +70,8 @@
 
 button {
     color: blue;
+}
+
+.list a {
+    text-decoration: none;
 }
