@@ -117,29 +117,6 @@ for article in lifestyle_articles
 	Article.create(description: description, title: title, author: author, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name)
 end
 
-for article in leadership_articles
-	description = article['description']
-	title = article['title']
-	if article['author_set'][0]['first_name'] && article['author_set'][0]['last_name']
-		author_first_name = article['author_set'][0]['first_name']
-		author_last_name = article['author_set'][0]['last_name']
-		author = author_first_name + " " + author_last_name
-	else
-		author = ""
-	end
-	publish_date = article['published_at'].split(' ')[0]
-	source = article['source']['name']
-	featured_image = article['image_set'][0]['urls']['large']
-	if article['link']
-		canonical_link = article['link']
-	else
-		canonical_link = ""
-	end
-	search_name = "leadership"
-
-	Article.create(description: description, title: title, author: author, publish_date: publish_date, source:source, featured_image: featured_image, canonical_link: canonical_link, search_name: search_name)
-end
-
 for article in small_business_articles
 	description = article['description']
 	title = article['title']

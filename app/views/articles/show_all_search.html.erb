@@ -11,7 +11,7 @@
 		<ul class="list-reset list__topics">
 			<% @articles.each do |article| %>
 
-			<a href="/all/technology">
+			<a href="/articles/<%= article.id %>">
 				<li class="clearfix border px1 story__list flex flex-center">
 
 					<h1 class="col col-8 sm-col-10 story__headline"><%= article.title %></h1>

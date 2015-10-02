@@ -18,9 +18,9 @@
 				<hr class="mb3">
 			</div>
 			<ul class="list-reset list__topics">
-				<a href="/all/technology"><li class="inline-block mr1"><button class="btn btn-outline mb1 blue" type="button" name="button">Technology</button></li></a>
-				<a href="/all/technology"><li class="inline-block mr1"><button class="btn btn-outline mb1 blue" type="button" name="button">Technology</button></li></a>
-				<a href="/all/technology"><li class="inline-block mr1"><button class="btn btn-outline mb1 blue" type="button" name="button">Technology</button></li></a>
+				<% @topics.each do |topic| %>
+				<a href="/all/<%= topic %>"><li class="inline-block mr1"><button class="btn btn-outline mb1 blue" type="button" name="button"><%= topic.capitalize! %></button></li></a>
+				<% end %>
 			</ul>
 		</div>
 

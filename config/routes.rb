@@ -7,4 +7,6 @@ Reader::Application.routes.draw do
 
   get '/all/:topic' => "articles#show_all_search"
 
+  get '/favorite_article' => "articles#favorite_article"
+
 end
