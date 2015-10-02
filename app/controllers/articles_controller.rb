@@ -4,6 +4,9 @@ class ArticlesController < ApplicationController
 		@topics = ["technology", "leadership", "innovation", "lifestyle", "smallbiz", "family", "health", "nutrition"]
 	end
 
+	def home2
+	end
+
 	def search
 	end
 
