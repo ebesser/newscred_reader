@@ -1,27 +1,31 @@
 <!-- Single Article View -->
 <div class="article">
 	<div class="img__article">
-		<img class="fit" src="<%= @article.featured_image %>">
+		<img src="<%= @article.featured_image %>">
 	</div>
 	<div class="container mx-auto px2">
 		<div class="clearfix">
-			<h1 class="article__title"><%= @article.title %></h1>
-			<hr>
-			<div class="meta">
-				<span><%= @article.publish_date %></span>
-				<span><%= @article.author %></span>
-				<span><%= @article.source %></span>
+			<div class="py2">
+				<span class="h5 inline-block px1 py0 white bg-gray rounded article_name"><%= @article.search_name %></span>
+				<h1 class="article__title"><%= @article.title %></h1>
+				<hr>
+			</div>
+			<div class="meta clearfix">
+				<div class="left">
+					<span><%= @article.publish_date %></span>
+					<span><%= @article.author %></span>
+					<span><%= @article.source %></span>
+				</div>
+				<div class="fav mx-auto center">
+					<% if @article.favorited == false%>
+						<%= button_to "Favorite", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav btn btn-outline mb1 bg-red"} %>
+					<% else %>
+						<%= button_to "Favorited", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"btn-fav btn btn-outline mb1 bg-green"} %>
+					<% end %>
+				</div>
 			</div>
 			<hr>
 			<p><%= @article.description.html_safe %></p>
-			<p><%= @article.search_name %></p>
-			<!-- <p><button class = "fixed top-0 btn btn-primary"> -->
-			<% if @article.favorited == false%>
-				<%= button_to "Favorite", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"fixed top-0 btn btn-primary mb1 bg-red"} %>
-			<% else %>
-				<%= button_to "Favorited", {controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true}, {class:"fixed top-0 btn btn-primary mb1 bg-green"} %>
-				<% end %>
-			<!-- </button></p> -->
 		</div>
 	</div>
 </div>
