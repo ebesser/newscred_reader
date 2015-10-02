@@ -10,6 +10,7 @@
 			<p><%= @article.source %></p>
 			<p><%= @article.description.html_safe %></p>
 			<p><%= @article.search_name %></p>
+			<%= button_to "Favorite", controller: "articles", action: "favorite_article", :guid => @article.guid, :id => @article.id, remote: true %>
 		</div>
 	</div>
 </div>

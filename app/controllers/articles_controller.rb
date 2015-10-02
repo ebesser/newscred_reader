@@ -20,6 +20,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def favorite_article
+		guid = params[:guid]
 
 		headers = {
 					"X-CSRF-TOKEN" => 'wVZJRKYRZFHTG4_cv6pjfk_S',
@@ -27,15 +28,15 @@ class ArticlesController < ApplicationController
 				}
 
 		payload = {
-			:guid => "97f024aeb60d5ba152bf018edd12d89d",
+			:guid => guid,
 			:format => "json"
 		}
 
-		url = 'https://cmc.newscred.com/api/collection/efe6bdd8c4078164e1ec55216cff71f1/items?access_key=740c832fcaf57fdd10dec387ef84df0c'
+		url = 'https://cmc.newscred.com/api/collection/69c9326f03b105b147a2394c1e801d33/items?access_key=740c832fcaf57fdd10dec387ef84df0c'
 
 		RestClient.post url, payload, headers
 
-		redirect_to '/'
+		redirect_to '/articles/' + params[:id] + ""
 	end
 
 end
