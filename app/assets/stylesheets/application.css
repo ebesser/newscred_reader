@@ -29,7 +29,7 @@
  }
 
  .img__thumb {
-     max-width: 150px;  //Constrained to remain inline for mobile view
+     width: 150px;  //Constrained to remain inline for mobile view
      height: auto;
  }
 
@@ -56,7 +56,7 @@
 }
 
 .story__list:hover {
-    background-color: lightgray;
+    background-color: #f7f7fa;
 }
 
 .story__thumb {
@@ -74,4 +74,8 @@ button {
 
 .list a {
     text-decoration: none;
+}
+
+.tag {
+    color: #bbbbbb;
 }

@@ -4,14 +4,14 @@
 	<div class="container mx-auto">
 
 		<div class="list__title clearfix">
-			<h3 class="right tag">In Technology</h3>
+			<p class="right tag">In Technology</p>
 		</div>
 
 		<!-- Generate list of articles -->
 		<ul class="list-reset list">
 			<% @articles.each do |article| %>
 			<a href="/articles/<%= article.id %>">
-				<li class="clearfix border px1 story__list flex flex-center">
+				<li class="clearfix px1 story__list flex flex-center">
 
 					<h1 class="col col-8 sm-col-10 story__headline"><%= article.title %></h1>
 
@@ -20,7 +20,7 @@
 					</div>
 				</li>
 			</a>
-			<hr class="mt1">
+			<hr class="m0">
 			<% end %>
 		</ul>
 
