@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+ h1,h2,h3,p {
+    font-family: "brandon-grotesque", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+ }
+
+ .container {
+     max-width: 500px;  //Override default basscss em size
+ }
+
+.loadview {
+     height: 100vh;
+     background: white;
+ }
+
+ .logo__ibm {
+     width: 200px;
+     height: auto;
+ }
+
+ .img__thumb {
+     width: 150px;  //Constrained to remain inline for mobile view
+     height: auto;
+ }
+
+ .list__reader a:hover {
+     text-decoration: none; //Reset underline
+ }
+
+ .list__title {
+     text-transform: uppercase;
+ }
+
+ .line__containers p {
+     margin: 0;     //Undo default margins inside line containers
+ }
+
+.story__list {
+    min-height: 112px;
+    width: 100%;
+}
+
+.story__list {
+    min-height: 91px;
+    width: 100%;
+}
+
+.story__list:hover {
+    background-color: #f7f7fa;
+}
+
+.story__thumb {
+    width: 70px;
+    height: auto;
+}
+
+.story__headline {
+    font-size: 1rem;
+    color: black;
+}
+
+button {
+    color: lightgray;
+}
+
+.list a {
+    text-decoration: none;
+}
+
+.tag {
+    color: #bbbbbb;
+}
+
+.img__article {
+    width: 100%;
+    background-size: cover;
+    /*Todo: The image needs to be shifted and fixed accordingly*/
+    /*Change this to auto on mobile*/
+    height: 300px;
+    overflow: hidden;
+}
+
+img {
+    width: inherit;
+}
+
+.article .meta {
+    color: #bbbbbb;
+}
+.article {
+    color: gray;
+}
+.article__title {
+    color: black;
+}
+
+.article .meta span {
+    content: "|";
+    padding: 5px 0;
+}
