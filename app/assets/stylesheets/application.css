@@ -12,6 +12,12 @@
  *= require_tree .
  */
 
+ h1,h2,h3,p {
+    font-family: "brandon-grotesque", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+ }
+
 .loadview {
      height: 100vh;
      background: white;
