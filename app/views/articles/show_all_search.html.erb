@@ -10,9 +10,8 @@
 		<!-- Generate list of articles -->
 		<ul class="list-reset list">
 			<% @articles.each do |article| %>
-
-			<a href="/all/technology">
-				<li class="clearfix px1 story__list flex flex-center">
+			<a href="/articles/<%= article.id %>">
+				<li class="clearfix border px1 story__list flex flex-center">
 
 					<h1 class="col col-8 sm-col-10 story__headline"><%= article.title %></h1>
 
