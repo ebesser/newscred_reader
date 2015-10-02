@@ -10,7 +10,7 @@
 
 <!-- Topics View -->
 <div class="topics flex flex-center p2">
-	<div class="container mx-auto">
+	<div style="width:100%; font-size: 3em;" class="container mx-auto">
 		<div class="clearfix">
 
 			<div class="list__title line__containers clearfix">
@@ -20,7 +20,7 @@
 			</div>
 			<ul class="list-reset list__topics">
 				<% @topics.each do |topic| %>
-				<a href="/all/<%= topic %>"><li class="mr4"><button class="btn btn-outline mb1 blue" type="button" name="button"><%= topic.capitalize! %></button></li></a>
+				<a href="/all/<%= topic %>"><li class="mr4"><button style="width:100%; height:2em;" class="btn btn-outline mb1 blue" type="button" name="button"><%= topic.capitalize! %></button></li></a>
 				<% end %>
 			</ul>
 		</div>
