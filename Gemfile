@@ -35,7 +35,7 @@ gem 'httparty'
 
 gem 'rest-client'
 
-gem 'dotenv'
+gem 'dotenv-rails'
 
 gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
