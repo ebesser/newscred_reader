@@ -1,28 +1,5 @@
-== README
+# NewsCred Mobile Reader
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a really simple application I built during a company hackathon that allows users to read their daily licensed content on the go and save the ones they like to NewsCred's Content Marketing Cloud (CMC) to be published later. The app sends a request to the CMC and adds the selected articles to the account's list of favorited articles.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+There is a large seed file that hits the NewsCred API and writes each of the articles to a database. I am using the dotenv gem to hide access tokens.
