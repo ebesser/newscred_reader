@@ -36,6 +36,7 @@ GEM
     coffee-script-source (1.9.1.1)
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
     hike (1.2.3)
@@ -127,6 +128,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  dotenv
   httparty
   jbuilder (~> 1.2)
   jquery-rails
