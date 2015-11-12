@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
 			:format => "json"
 		}
 
-		url = "https://cmc.newscred.com/api/collection/efe6bdd8c4078164e1ec55216cff71f1/items?access_key="+ACCESS_KEY4+"""
+		url = "https://cmc.newscred.com/api/collection/efe6bdd8c4078164e1ec55216cff71f1/items?access_key="+ENV["ACCESS_KEY4"]+"""
 
 		res = RestClient.post url, payload, headers
 
